@@ -7,3 +7,8 @@ const app = express()
 app.use(express.json());
 
 let args = minimist(process.argv.slice(2));
+const port = args.port || 5000;
+
+app.get('/app', (req, res) => {
+    res.status(200).send(rps(null));
+})
