@@ -36,7 +36,7 @@ app.get('/app/rpsls/play', (req, res) => {
 
 //post rps
 app.post('/app/rps/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rpsls(req.query.shot)));
+    res.status(200).send(JSON.stringify(rps(req.query.shot)));
 })
 
 //post rpsls
