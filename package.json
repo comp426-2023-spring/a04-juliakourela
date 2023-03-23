@@ -1,0 +1,19 @@
+{
+  "name": "julias-a04",
+  "version": "1.0.0",
+  "description": "Stand up an API",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"node server.js --port=5555\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a04-juliakourela.git"
+  },
+  "author": "@juliakourela",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a04-juliakourela/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a04-juliakourela#readme"
+}
