@@ -3,6 +3,7 @@ import express from "express";
 import minimist from "minimist";
 
 const app = express()
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 let args = minimist(process.argv.slice(2));
