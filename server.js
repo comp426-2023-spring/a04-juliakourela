@@ -2,9 +2,9 @@ import {rps, rpsls} from "./lib/rpsls.js";
 import express from "express";
 import minimist from "minimist";
 
-const app = express()
-app.use(express.urlencoded({extended: true}));
+const app = express();
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 let args = minimist(process.argv.slice(2));
 const port = args.port || 5000;
@@ -19,14 +19,14 @@ app.get('/app/rps', (req, res) => {
     res.status(200).send(JSON.stringify(rps()));
 })
 
-//rps with arg
-app.get('/app/rp/play', (req, res) => {
-    res.status(200).send(JSON.stringify(rps(req.query.shot)));
-})
-
 //rpsls with no args
 app.get('/app/rpsls/play', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls()));
+})
+
+//rps with arg
+app.get('/app/rps/play', (req, res) => {
+    res.status(200).send(JSON.stringify(rps(req.query.shot)));
 })
 
 //rpsls with arg
