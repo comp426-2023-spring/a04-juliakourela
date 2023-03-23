@@ -17,3 +17,7 @@ app.get('*', (req, res) => {
 app.get('/app', (req, res) => {
     res.status(200).send(rps(null));
 })
+
+app.listen(port, () => {
+    console.log(`the app is listening!!! on port ${port}`)
+})
