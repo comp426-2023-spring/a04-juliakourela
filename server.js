@@ -20,7 +20,7 @@ app.get('/app/rps', (req, res) => {
 })
 
 //rpsls with no args
-app.get('/app/rpsls/play', (req, res) => {
+app.get('/app/rpsls', (req, res) => {
     res.status(200).send(JSON.stringify(rpsls()));
 })
 
